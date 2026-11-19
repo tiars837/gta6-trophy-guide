@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GTA VI Trophy Guide — Leonida Checklist</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Grand Theft Auto VI &middot; PlayStation 5</p>
+    <h1>Leonida Trophy Guide</h1>
+    <p class="lede">All 55 trophies — one checklist, one roadmap, and the one missable step you must not skip. Works fully offline; your progress stays in your browser.</p>
+    <div class="progress-wrap" role="status" aria-live="polite">
+      <div class="progress-line"><span id="progressText">0 / 55 earned</span><span id="progressPct">0%</span></div>
+      <div class="progress-bar"><div id="progressFill" class="progress-fill" style="width:0%"></div></div>
+      <p class="progress-note" id="progressNote">Earn the other 54 and the platinum is yours.</p>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="callout" id="missableCallout">
+    <strong>Only one trophy can be missed.</strong>
+    <span>Positive Mental Attitude — meditate with Lucia on the balcony of Jason's house in Chapter 1, after the mission Down to Earth. There is no mission replay, so do it before Chapter 1 ends and keep a Chapter 1 manual save.</span>
+    <button id="jumpMissable" type="button">Show it</button>
+  </section>
+
+  <section class="toolbar" aria-label="Filter trophies">
+    <input id="search" type="search" placeholder="Search a trophy or a guide…" aria-label="Search trophies">
+    <select id="kindFilter" aria-label="Filter by type">
+      <option value="">All types</option>
+      <option value="story">Story</option>
+      <option value="side">Side characters &amp; strangers</option>
+      <option value="collectible">Collectibles</option>
+      <option value="activity">Activities</option>
+      <option value="combat">Combat &amp; robbery</option>
+      <option value="exploration">Exploration</option>
+      <option value="money">Money</option>
+      <option value="vague">Story moments (unconfirmed)</option>
+      <option value="completion">100% completion</option>
+    </select>
+    <select id="gradeFilter" aria-label="Filter by grade">
+      <option value="">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+    <label class="check"><input id="missableOnly" type="checkbox"> Missable only</label>
+    <label class="check"><input id="hideEarned" type="checkbox"> Hide earned</label>
+    <label class="check spoiler-check"><input id="spoilerToggle" type="checkbox"> Spoiler mode <span class="hint">hides story trophies until earned</span></label>
+    <div class="actions">
+      <button id="exportBtn" type="button">Export progress</button>
+      <button id="importBtn" type="button">Import progress</button>
+      <input id="importFile" type="file" accept="application/json" hidden>
+      <button id="resetBtn" type="button" class="danger">Reset</button>
+    </div>
+  </section>
+
+  <section class="roadmap" id="roadmap" aria-label="Roadmap to platinum">
+    <h2>Roadmap to platinum</h2>
+    <p class="section-note">Six stages, in the order you should play them. Roughly 200 hours to platinum.</p>
+    <ol id="roadmapList" class="roadmap-list"></ol>
+  </section>
+
+  <section class="trophies" aria-label="Trophy list">
+    <h2 id="listHeading">All 55 trophies</h2>
+    <p class="section-note" id="listCount"></p>
+    <div id="trophyList" class="trophy-list"></div>
+    <p id="emptyState" class="empty" hidden>No trophies match these filters.</p>
+  </section>
+
+  <footer class="sources">
+    <h2>Sources &amp; notes</h2>
+    <p>Names, descriptions and grades are the official PlayStation list, as published by Exophase and PSNProfiles. Guides are written for this page, in our own words. Six trophies (In The Beginning…, Capital Offense, Personal Best, Bad Luck, I Guess, The Truth Is Out There and Ten Pin) have no confirmed unlock method at launch — those guides say so honestly instead of guessing. Hidden flags follow the Exophase listing: 28 trophies are hidden on PlayStation until earned. Counts (42 Shooting Range challenges, 14 drone race locations, 18 meditation spots, 52 areas, 9 gangs, 8 garages, 500 choices) are the counts PlayStation tracks.</p>
+    <p>Sources: Exophase, PSNProfiles, PowerPyx and Output Lag. This is an unofficial fan guide; it is not affiliated with Rockstar Games and uses no Rockstar artwork or logos.</p>
+    <p class="small">Progress is stored in your browser (localStorage, key <code>gta6-trophy-guide-v1</code>). Export it before clearing site data.</p>
+  </footer>
+</main>
+<script src="app.js"></script>
+</body>
+</html>
